@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/estilo.css">
+    <link rel="shortcut icon" href="../static/media/images/icone-verde.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div id="menu">
+
+        <div id="menu-home" class="item-lista-menu">
+            <div id="menu-circle" class="circle"></div>
+            <div class="menu-word">
+                <h1>Home</h1>
+            </div>
+        </div>
+
+        <div id="menu-como-funciona" class="item-lista-menu">
+            <div id="menu-circle" class="circle"></div>
+            <div class="menu-word">
+                <h1>Como funciona</h1>
+            </div>
+        </div>
+
+        <div id="menu-torneios" class="item-lista-menu">
+            <div id="menu-circle" class="circle"></div>
+            <div class="menu-word">
+                <h1>Torneios</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div id="topo-da-pagina">
+        <div id="icone-perfil">
+            <img src="../static/media/images/logo verde.png" alt="Logo pequeno" width="2%">
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div id="content">
+        <div id="home">
+            {% for message in get_flashed_messages() %}
+            {% if message %}
+            <div id="registration-status" class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <img src="../static/media/images/logo-preto.png" alt="logo-preto" width="50%">
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div id="como-funciona">
+            <div id="passo-1">
+                <div class="numero-passos">
+                    <h3>1</h3>
+                </div>
+                <div class="passo-escrito">
+                    <p>Inscreva seu time na aba "Torneios" e receba um e-mail de confirmação.</p>
+                </div>
+            </div>
+            <div id="passo-2">
+                <div class="numero-passos">
+                    <h3>2</h3>
+                </div>
+                <div class="passo-escrito">
+                    <p>Use o link recebido no e-mail cadastrado para fazer parte do nosso Discord.</p>
+                </div>
+            </div>
+            <div id="passo-3">
+                <div class="numero-passos">
+                    <h3>3</h3>
+                </div>
+                <div class="passo-escrito">
+                    <p>Agora é só jogar!</p>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div id="torneios">
+            <div id="inscricao-torneios">
+                <div id="descricao-torneios">
+                    <div id="nome-torneio">
+                        <h1 class="line-height-a">LIGA P6</h1>
+                        <P class="line-height-b">PREMIAÇÃO:</P>
+                        <h1>R$120,00</h1>
+                    </div>
+                    <div id="data-torneio">
+                        <div id="mesma-linha">
+                            <p>DATA:&nbsp</p>
+                            <h2>00/00/23</h2>
+                        </div>
+                        <h2>ENTRADA GRATUITA</h2>
+                    </div>
+                </div>
+                <div id="inscreva-se">
+                    <button id="btn-inscreva-se"> INSCREVA-SE </button>
+                    </a>
+                </div>
+            </div>
+
+            <div id="chaveamento-torneios">
+
+                <div id="ja-esta-inscrito">
+                    <p>JA ESTÁ INSCRITO? CONFIRA SEU STATUS AQUI:&nbsp</p>
+                </div>
+                <button id="btn-chaveamento">Chaveamento</button>
+            </div>
+
+        </div>
+        <dialog id="chaveamento-pop-up">
+            <div id="chaveamento">
+
+                <button id="close-chaveamento">
+                    <img src="../static/media/images/close-icon-paint.png" alt="close-chaveamento">
+                </button>
+
+                <div class="cabecalho-chaveamento">
+                    <h1>LIGA P6</h1>
+                    <h2>Status: oitavas de final</h2>
+                </div>
+                <div class="etapas-chaveamento" id="final">
+                    <div id="ligacao" class="ligacao-final"></div>
+                </div>
+                <div class="etapas-chaveamento" id="semi">
+                    <div id="ligacao" class="ligacao-semi"></div>
+                    <div id="ligacao" class="ligacao-semi"></div>
+                </div>
+                <div class="etapas-chaveamento" id="quartas">
+                    <div id="ligacao" class="ligacao-quartas"></div>
+                    <div id="ligacao" class="ligacao-quartas"></div>
+                    <div id="ligacao" class="ligacao-quartas"></div>
+                    <div id="ligacao" class="ligacao-quartas"></div>
+                </div>
+                <div id="time-1" class="time"></div>
+                <div id="time-2" class="time"></div>
+                <div id="time-3" class="time"></div>
+                <div id="time-4" class="time"></div>
+                <div id="time-5" class="time"></div>
+                <div id="time-6" class="time"></div>
+                <div id="time-7" class="time"></div>
+                <div id="time-8" class="time"></div>
+                <div id="time-9" class="time"></div>
+                <div id="time-10" class="time"></div>
+                <div id="time-11" class="time"></div>
+                <div id="time-12" class="time"></div>
+                <div id="time-13" class="time"></div>
+                <div id="time-14" class="time"></div>
+                <div id="time-15" class="time"></div>
+            </div>
+        </dialog>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    </div>
+
+    <div id="rodape">
+
+        <div id="contato">
+            <h2>Ficou com alguma dúvida?</h2>
+            <p>Entre em contato com a gente</p>
+        </div>
+        <div id="instagram">
+            <h2>@cabrera_henrique @lucca_lucheti @hiradots</h2>
+        </div>
+        <img src="../static/media/images/logo-branco.png" alt="logo branca" width="10%">
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------->
+    <dialog id="pop-up">
+
+        <div id="topo-pop-up">
+
+            <div id="botao-fechar-pop-up">
+                <button id="close-button">
+                    <img src="../static/media/images/close-icon-paint.png" alt="close-button">
+                </button>
+            </div>
+
+            <h1 id="titulo-pop-up">CADASTRO</h1>
+
+        </div>
+
+        <p id="cabecalho">Inscreva apenas o e-mail do capitão da equipe, por onde será enviado o link para o servidor do
+            Player 6 no Discord.</p>
+
+
+        <form method="post" id="corpo-pop-up">
+            {{ form.csrf_token }}
+
+            {{form.team.label(class="form-label")}}
+            {{form.team(class="form-control")}}
+
+            {{form.email.label(class="form-label")}}
+            {{form.email(class="form-control")}}
+
+            <h2>NICK NO LoL DOS JOGADORES:</h2>
+
+            {{form.player1.label(class="form-label")}}
+            {{form.player1(class="form-control")}}
+
+            {{form.player2.label(class="form-label")}}
+            {{form.player2(class="form-control")}}
+
+            {{form.player3.label(class="form-label")}}
+            {{form.player3(class="form-control")}}
+
+            {{form.player4.label(class="form-label")}}
+            {{form.player4(class="form-control")}}
+
+            {{form.player5.label(class="form-label")}}
+            {{form.player5(class="form-control")}}
+
+            {{form.submit}}
+        </form>
+    </dialog>
+
+    <script src="../static/js/javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
